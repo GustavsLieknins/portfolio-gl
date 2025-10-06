@@ -9,15 +9,15 @@ const items = [
     title: "Eventify",
     youtubeId: "-ms5nOc79GQ",
     tags: ["React", "Laravel", "API"],
-    desc: "Eventify helps you plan trips around events with routes, budgets and shared itineraries.",
+    desc: "Eventify helps you plan trips for all types of events, from concerts to festivals.",
     github: "https://github.com/GustavsLieknins/Eventify",
   },
   {
     id: 2,
     title: "Gustify",
     youtubeId: "o92E2my_xHs",
-    tags: ["Laravel", "API", "Socialite"],
-    desc: "Gustify pulls Spotify data you rarely see and turns it into clean, shareable insights.",
+    tags: ["Laravel", "Socialite", "API"],
+    desc: "Gustify shows you stats from Spotify, that Spotify it self doesnt show you.",
     github: "https://github.com/GustavsLieknins/spoty",
   },
   {
@@ -25,7 +25,7 @@ const items = [
     title: "Car Marketplace",
     youtubeId: "4fOuOE-ri-A",
     tags: ["Laravel", "Breeze", "CSS"],
-    desc: "A full marketplace with admin and superadmin panels for managing listings and users.",
+    desc: "A full car marketplace with admin and superadmin panels for managing listings and users.",
     github: "https://github.com/GustavsLieknins/marketplace",
   },
 ];
