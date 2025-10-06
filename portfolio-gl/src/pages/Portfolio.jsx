@@ -5,7 +5,7 @@ import "./Portfolio.css";
 
 const items = [
   { id: 1, title: "Eventify",  youtubeId: "-ms5nOc79GQ", tags: ["React", "Laravel", "API"], desc: "Eventify, plan trips for events." },
-  { id: 2, title: "Gustify",   youtubeId: "ScMzIvxBSi4", tags: ["Laravel", "API", "Socialite"], desc: "Spotify stats you don't see on Spotify." },
+  { id: 2, title: "Gustify",   youtubeId: "o92E2my_xHs", tags: ["Laravel", "API", "Socialite"], desc: "Gustify, stats you don't see on Spotify." },
   // { id: 3, title: "Template",  youtubeId: "aqz-KE-bpKQ", tags: ["Template", "Template"], desc: "Template." },
 ];
 
