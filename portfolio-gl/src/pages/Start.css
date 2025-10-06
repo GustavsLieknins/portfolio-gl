@@ -123,3 +123,34 @@ body{
   .tagline{ font-size:13px }
   .actions{ gap:8px }
 }
+/* GitHub button */
+.btn.github{
+  display:inline-flex; align-items:center; gap:8px;
+  border-color:#30363d;
+  background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+}
+.btn.github .icon{
+  width:18px; height:18px; flex:0 0 18px;
+  fill:#e9eefb; opacity:.9;
+  transition:transform .15s ease, opacity .15s ease;
+}
+.btn.github:hover .icon{ transform:translateY(-1px); opacity:1 }
+
+/* Footer GitHub link */
+.gh-foot{ color:#e9eefb; text-decoration:none; border-bottom:1px dashed rgba(233,238,251,.4) }
+.gh-foot:hover{ border-bottom-color:transparent }
+/* Avoid iOS Safari input-focus zoom */
+html{ -webkit-text-size-adjust: 100%; }
+
+@media (max-width: 780px){
+  input, textarea, select, button{ font-size:16px; } /* ensure >=16px */
+}
+
+/* Extra guard: only iOS/WebKit */
+@supports (-webkit-touch-callout: none){
+  .contactForm input,
+  .contactForm textarea,
+  .contactForm select{
+    font-size:16px;
+  }
+}
