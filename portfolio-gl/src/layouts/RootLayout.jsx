@@ -1,13 +1,11 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import GlobalBackground from "../components/GlobalBackground";
 
 export default function RootLayout() {
   return (
-    <div style={{ padding: 24 }}>
-      <nav style={{ display: "flex", gap: 12, marginBottom: 16 }}>
-        <NavLink to="/" end>Start</NavLink>
-        <NavLink to="/portfolio">Portfolio</NavLink>
-      </nav>
+    <>
+      <GlobalBackground />
       <Outlet />
-    </div>
+    </>
   );
 }
