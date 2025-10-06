@@ -160,7 +160,7 @@
   color: var(--fg);
 }
 
-/* Lightbox */
+
 .lb {
   position: fixed;
   inset: 0;
@@ -367,4 +367,8 @@
   .lb__media {
     max-height: 52svh;
   }
+}
+.p2-hero
+{
+  padding-bottom: 10px;
 }
