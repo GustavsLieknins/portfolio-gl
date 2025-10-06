@@ -2,10 +2,8 @@ import { useLayoutEffect, useRef, useState, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
-/** Soft glow ring under the path to lift visibility. */
 function GlowRing({ rx = 1.15, ry = 0.42 }) {
   const geom = useMemo(() => {
-    // build a flat ellipse as a RingGeometry and scale Y
     const g = new THREE.RingGeometry(0.22, 0.62, 128);
     g.rotateX(-Math.PI / 2);
     return g;
@@ -76,7 +74,6 @@ function Orbs({ rx = 1.15, ry = 0.42, count = 7, baseSize = 0.085 }) {
 
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
-    // Slight breathing to avoid robotic motion
     const base = (t * 0.09 + Math.sin(t * 0.7) * 0.02) % 1;
 
     phases.forEach((phase, i) => {
@@ -97,7 +94,6 @@ function Orbs({ rx = 1.15, ry = 0.42, count = 7, baseSize = 0.085 }) {
 
       const sprite = g.children[0];
       if (sprite) {
-        // brighter when closer to viewer
         const front = Math.max(0, Math.cos(a));
         sprite.material.opacity = 0.45 + front * 0.55;
         sprite.scale.setScalar(s * 3.1);

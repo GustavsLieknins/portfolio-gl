@@ -2,18 +2,15 @@ import { useLayoutEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
-/** Tiny dependency graph that sits behind the accent word. */
 function Graph() {
   const g = useRef();
   const N = 10, R = 0.85;
 
-  // circle of nodes
   const nodes = Array.from({ length: N }, (_, i) => {
     const a = (i / N) * Math.PI * 2;
     return new THREE.Vector3(Math.cos(a) * R, Math.sin(a) * 0.20, Math.sin(a) * R);
   });
 
-  // links: ring + skip-by-3
   const segs = [];
   for (let i = 0; i < N; i++) segs.push([i,(i+1)%N], [i,(i+3)%N]);
   const pos = new Float32Array(segs.length * 2 * 3);
@@ -52,7 +49,6 @@ function Graph() {
   );
 }
 
-/** Absolutely positions a small transparent canvas over the accent word. */
 export default function HeroGraph({ targetSelector = "#accent-anchor" }){
   const boxRef = useRef(null);
   const [style, setStyle] = useState({ opacity:0 });
@@ -65,7 +61,6 @@ export default function HeroGraph({ targetSelector = "#accent-anchor" }){
     const r = el.getBoundingClientRect();
     const parent = host.parentElement.getBoundingClientRect();
 
-    // Slightly larger than the word
     const padX = r.width * 0.35;
     const padY = r.height * 1.4;
 
