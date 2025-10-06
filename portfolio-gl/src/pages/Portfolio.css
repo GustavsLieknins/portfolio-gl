@@ -110,21 +110,36 @@
   filter: saturate(1.05) contrast(1.02);
 }
 
-.ghBadge {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  background: linear-gradient(90deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
-  border: 1px solid var(--border);
-  color: var(--fg);
-  text-decoration: none;
+.ghBadge{
+  position:absolute; right:10px; top:10px;
+  display:inline-flex; align-items:center; gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  font-size:12px; font-weight:700;
+  color:#eef3ff;
+  background:
+    linear-gradient(180deg, rgba(16,22,37,.78), rgba(16,22,37,.58));
+  border:1px solid rgba(160,180,220,.35);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  text-decoration:none;
+  box-shadow:
+    0 8px 18px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.08);
+  text-shadow: 0 1px 2px rgba(0,0,0,.45);
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
 }
+.ghBadge svg{ width:14px; height:14px; fill:currentColor; opacity:.95 }
+
+.ghBadge:hover,
+.ghBadge:focus-visible{
+  transform:translateY(-1px);
+  background:linear-gradient(180deg, rgba(20,28,46,.9), rgba(20,28,46,.62));
+  border-color:rgba(124,92,255,.45);
+  box-shadow:0 12px 28px rgba(0,0,0,.45), 0 0 0 1px rgba(0,212,255,.18) inset;
+  outline:none;
+}
+
 
 .ghBadge svg {
   width: 14px;
