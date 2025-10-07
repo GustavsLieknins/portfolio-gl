@@ -162,7 +162,7 @@ export default function Start() {
       </main>
 
       <footer className="wrap footer">
-        <small>© {new Date().getFullYear()} — Built by Gustavs Lieknins · <a href={GITHUB_URL} className="gh-foot" target="_blank" rel="noopener noreferrer">GitHub</a></small>
+        <small>© {new Date().getFullYear()} - Built by Gustavs Lieknins · <a href={GITHUB_URL} className="gh-foot" target="_blank" rel="noopener noreferrer">GitHub</a></small>
       </footer>
 
     </>
